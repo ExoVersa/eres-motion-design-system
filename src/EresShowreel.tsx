@@ -113,7 +113,8 @@ const DocumentScene: React.FC = () => (
 const End: React.FC = () => {
   const frame = useCurrentFrame();
   const scale = interpolate(frame, [0, 100], [0.94, 1], {extrapolateRight: 'clamp'});
-  return <AbsoluteFill style={{backgroundColor: C.greenDark, color: C.white, fontFamily: font, overflow: 'hidden'}}><div style={{position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(0,234,180,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(0,234,180,.07) 1px, transparent 1px)', backgroundSize: 96}} /><div style={{position: 'absolute', left: 120, top: 260, transform: `scale(${scale})`, transformOrigin: 'left top'}}><div style={{fontSize: 108, fontWeight: 800}}>One system.</div><div style={{fontSize: 108, fontWeight: 800, color: C.green}}>Many states.</div></div><div style={{position: 'absolute', left: 120, bottom: 110}}><Label color='#A8CEC0'>ERES / DESIGN SYSTEM</Label></div></AbsoluteFill>;
+  return <AbsoluteFill style={{backgroundColor: C.greenDark, color: C.white, fontFamily: font, overflow: 'hidden'}}><div style={{position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(0,234,180,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(0,234,180,.07) 1px, transparent 1px)', backgroundSize: 96}} /><div style={{position: 'absolute', left: 120, top: 260, transform: `scale(${scale})`, transformOrigin: 'left top'}}><div style={{fontSize: 108, fontWeight: 800}}>One system.</div><div style={{fontSize: 108, fontWeight: 800, color: C.green}}>Many states.</div></div><div style={{position: 'absolute', left: 120, bottom: 110}}><Label color='#A8CEC0'>ERES / DESIGN SYSTEM</Label></div></AbsoluteFill>};
+
 
 export const EresShowreel: React.FC = () => (
   <AbsoluteFill>
