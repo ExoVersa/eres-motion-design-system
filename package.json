@@ -7,7 +7,8 @@
     "studio": "remotion studio src/index.tsx",
     "render": "remotion render src/index.tsx EresShowreel out/eres-showreel.mp4 --codec=h264 --crf=16 --concurrency=4",
     "render:preview": "remotion render src/index.tsx EresShowreel out/preview.mp4 --codec=h264 --crf=20 --frames=0-300 --concurrency=4",
-    "assets:search": "tsx scripts/search-assets.ts"
+    "assets:search": "tsx scripts/search-assets.ts",
+    "assets:download": "tsx scripts/download-asset.ts"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.0",
