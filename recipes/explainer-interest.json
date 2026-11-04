@@ -1,0 +1,123 @@
+{
+  "id": "explainer-interest-001",
+  "title": "Comment fonctionne l'intéressement ?",
+  "description": "Vidéo pédagogique courte destinée aux salariés et aux entreprises.",
+  "engine": "auto",
+  "format": {
+    "type": "landscape",
+    "width": 1920,
+    "height": 1080,
+    "fps": 60
+  },
+  "durationInSeconds": 60,
+  "brand": {
+    "theme": "eres",
+    "darkMode": false,
+    "typography": "Roobert"
+  },
+  "assets": [
+    {
+      "id": "eres-logo",
+      "type": "logo",
+      "provider": "figma",
+      "localPath": "public/branding/eres/logo.svg",
+      "alt": "Logo Eres"
+    },
+    {
+      "id": "employee-team",
+      "type": "image",
+      "provider": "unsplash",
+      "sourceUrl": "",
+      "author": "",
+      "license": "Unsplash License",
+      "attribution": "",
+      "alt": "Équipe en réunion"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "hook",
+      "kind": "hook",
+      "startInSeconds": 0,
+      "durationInSeconds": 5,
+      "title": "Et si la performance de l'entreprise profitait aussi aux salariés ?",
+      "animation": {
+        "entrance": "text-reveal",
+        "exit": "smooth-scale",
+        "easing": "easeOutExpo",
+        "camera": "slow-push",
+        "motionBlur": true
+      }
+    },
+    {
+      "id": "definition",
+      "kind": "voiceover",
+      "startInSeconds": 5,
+      "durationInSeconds": 12,
+      "title": "L'intéressement en une phrase",
+      "narration": "L'intéressement permet de partager une partie des résultats ou de la performance de l'entreprise avec les salariés."
+    },
+    {
+      "id": "visual-example",
+      "kind": "image",
+      "startInSeconds": 17,
+      "durationInSeconds": 12,
+      "assetIds": [
+        "employee-team"
+      ],
+      "animation": {
+        "entrance": "parallax-in",
+        "exit": "crossfade",
+        "easing": "easeInOutCubic",
+        "camera": "slow-pan",
+        "motionBlur": true
+      }
+    },
+    {
+      "id": "mechanism",
+      "kind": "chart",
+      "startInSeconds": 29,
+      "durationInSeconds": 15,
+      "title": "Un mécanisme simple à comprendre",
+      "data": {
+        "steps": [
+          "Résultats de l'entreprise",
+          "Calcul de la prime",
+          "Répartition entre les salariés"
+        ]
+      },
+      "animation": {
+        "entrance": "staggered-reveal",
+        "exit": "wipe",
+        "easing": "easeOutQuart",
+        "motionBlur": true
+      }
+    },
+    {
+      "id": "conclusion",
+      "kind": "outro",
+      "startInSeconds": 44,
+      "durationInSeconds": 16,
+      "title": "L'épargne salariale au service du collectif.",
+      "animation": {
+        "entrance": "word-by-word",
+        "exit": "fade",
+        "easing": "easeOutExpo",
+        "camera": "slow-pull",
+        "motionBlur": true
+      }
+    }
+  ],
+  "audio": [],
+  "captions": [],
+  "outputs": [
+    {
+      "format": "landscape",
+      "width": 1920,
+      "height": 1080,
+      "fps": 60,
+      "codec": "h264",
+      "filename": "out/explainer-interest-001.mp4"
+    }
+  ]
+}
