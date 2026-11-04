@@ -1,4 +1,4 @@
-name: Render Eres Showreel
+name: Render Eres Videos
 
 on:
   workflow_dispatch:
@@ -7,21 +7,36 @@ jobs:
   render:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
+
       - name: Install dependencies
         run: npm install
-      - name: Render Remotion composition
+
+      - name: Render Asset Motion Preview
         run: |
           mkdir -p out
-          npx remotion render src/index.tsx EresShowreel out/eres-showreel.mp4 --codec=h264 --crf=16 --concurrency=4
-      - name: Upload MP4
+          npx remotion render src/index.tsx AssetMotionPreview out/asset-motion-preview.mp4 \
+            --codec=h264 \
+            --crf=16 \
+            --concurrency=4
+
+      - name: Render Eres Showreel
+        run: |
+          npx remotion render src/index.tsx EresShowreel out/eres-showreel.mp4 \
+            --codec=h264 \
+            --crf=16 \
+            --concurrency=4
+
+      - name: Upload MP4 files
         uses: actions/upload-artifact@v4
         with:
-          name: eres-showreel
-          path: out/eres-showreel.mp4
+          name: eres-video-renders
+          path: out/
